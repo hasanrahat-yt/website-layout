@@ -1,4 +1,4 @@
-<!-- When Initialize your project -->
+# When Initialize your project
 - git init
 - git add .
 - git commit -m "Website layout"
@@ -6,7 +6,7 @@
 - git push -u origin master
 
 
-<!-- Update Your Project -->
+# Update Your Project
 - git add .
 - git commit -m "Readme file update"
 - git push 
