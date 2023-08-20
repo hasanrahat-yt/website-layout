@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    padding: 0 150px;
+    height: 60px;
+}
+
+.logo{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logo span{
+    color: red;
+}
+
+.header .navbar a{
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.header .navbar a:hover{
+    background-color: white;
+}
+
+.header .mobileResponsive{
+    height: 30px;
+    width: 40px;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 2px;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.header .mobileResponsive span{
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.mainArea{
+    display: grid;
+    padding: 0 150px;
+    gap: 30px;
+    grid-template-columns: 300px auto;
+    margin: 40px 0;
+    align-items: start;
+}
+
+.mainArea .asideBar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color:  #f8f6f6;
+    padding: 15px;
+    /* width: 250px; */
+    /* flex: 3; */
+}
+
+.mainArea .asideBar a{
+    padding: 10px ;
+    text-align: center;
+    background-color: aquamarine;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.mainArea .aboutSection{
+    padding: 10px;
+    /* height: 300px; */
+    background-color: aqua;
+    display: flex;
+    gap: 20px;
+    /* flex: 9; */
+    /* width: calc(100% - 250px); */
+}
+.aboutSection .contentBox{
+    flex: 1;
+}
+
+.aboutSection .imgBox{
+    width: 100%;
+    flex: 1;
+
+}
+
+.aboutSection .imgBox img{
+    width: 100%;
+}
+
+
+.footer{
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* responsive css  */
+@media (max-width: 1200px) {
+    .aboutSection{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+    .header .navbar{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .header .navbar.active{
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: black;
+        color: white;
+
+    }
+
+    .header .mobileResponsive{
+        display: flex;
+    }
+
+    .mainArea{
+        grid-template-columns:  auto;
+    }
+}
+
+
